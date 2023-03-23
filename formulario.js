@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector(".formulario")
 
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDefault();
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -55,7 +55,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista")
 lista.appendChild(elementoLista)
 
 var spanNombre = document.createElement("span")
@@ -90,8 +90,8 @@ var corteLinea = document.createElement("br")
 elementoLista.appendChild(corteLinea)
 elementoLista.appendChild(botonBorrar);
 
- botonBorrar.onclick = function() {
+botonBorrar.onclick = function() {
 // this.parentNode.style.display = 'none';
-botonBorrar.parentNode.remove()
+    botonBorrar.parentNode.remove()
   }
 }
